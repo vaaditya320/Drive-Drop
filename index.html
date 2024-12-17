@@ -1,110 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Drive Drop</title>
-  <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      background: linear-gradient(135deg, #1e3c72, #2a5298);
-      color: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-    }
-
-    .container {
-      text-align: center;
-      padding: 2rem;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-      width: 400px;
-    }
-
-    .container h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-      color: #f9f9f9;
-    }
-
-    .file-input {
-      margin: 1.5rem 0;
-    }
-
-    .file-input input {
-      width: 100%;
-      padding: 0.75rem;
-      border: none;
-      border-radius: 5px;
-    }
-
-    .upload-btn {
-      background: #007BFF;
-      border: none;
-      padding: 0.75rem 1.5rem;
-      border-radius: 5px;
-      font-size: 1rem;
-      color: #fff;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    .upload-btn:hover {
-      background: #0056b3;
-    }
-
-    .message {
-      margin-top: 1rem;
-      font-size: 1rem;
-      color: #f0f0f0;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="0; url=https://script.google.com/macros/s/AKfycbwgy32WZi5Pij9_YIx2a_i2qYBVxT5ZsU1hgu6nyer4WnTXjxutpITGtBhU6gCpq7Cx7A/exec">
+    <title>Redirecting...</title>
 </head>
 <body>
-  <div class="container">
-    <h1>Upload to Drive</h1>
-    <div class="file-input">
-      <input type="file" id="file" />
-    </div>
-    <button class="upload-btn" onclick="uploadFile()">Upload</button>
-    <div class="message" id="message"></div>
-  </div>
-
   <script>
-    async function uploadFile() {
-      const fileInput = document.getElementById('file');
-      const messageBox = document.getElementById('message');
-
-      if (fileInput.files.length === 0) {
-        messageBox.textContent = "Please select a file to upload.";
-        return;
-      }
-
-      const file = fileInput.files[0];
-      const reader = new FileReader();
-
-      reader.onload = async function (event) {
-        const fileContent = event.target.result;
-        const fileName = file.name;
-
-        const response = await fetch('https://script.google.com/macros/s/AKfycbxTI9SC0-OSWgS-soi6G1FZxMSr0StMt-NWSy26jtt8vLSBqYfDAV8svKtm--8l3Nr1/exec', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ fileName, fileContent }),
-        });
-
-        const result = await response.json();
-        messageBox.textContent = result.message || "Upload failed!";
-      };
-
-      reader.readAsText(file);
-    }
+    window.location.href = "https://script.google.com/macros/s/AKfycbwgy32WZi5Pij9_YIx2a_i2qYBVxT5ZsU1hgu6nyer4WnTXjxutpITGtBhU6gCpq7Cx7A/exec";
   </script>
+    <p>If you are not redirected automatically, click <a href="https://script.google.com/macros/s/AKfycbwgy32WZi5Pij9_YIx2a_i2qYBVxT5ZsU1hgu6nyer4WnTXjxutpITGtBhU6gCpq7Cx7A/exec">here</a>.</p>
+    
 </body>
 </html>
